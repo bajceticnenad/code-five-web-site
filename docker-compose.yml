@@ -1,0 +1,7 @@
+services:
+  web:
+    image: ghcr.io/bajceticnenad/codefive-website:latest
+    container_name: codefive-website
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8088:80"
