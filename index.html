@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FlowBiz — Digitalna isprava u minutima</title>
+<title>FlowBiz</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -22,14 +24,14 @@
 html{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 
 /* ── NAV ── */
-nav{position:sticky;top:0;z-index:200;height:60px;background:rgba(244,246,252,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+body>nav{position:sticky;top:0;z-index:200;height:60px;background:rgba(244,246,252,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem;height:60px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:10px}
 .nav-logo img{height:36px;width:auto}
 .nav-logo-text{font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-0.02em}
 .nav-logo-text span{color:var(--accent)}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:13.5px;color:var(--ink3);text-decoration:none;font-weight:400;transition:color .15s}
+.nav-links a{font-size:15px;color:var(--ink2);text-decoration:none;font-weight:700;transition:color .15s}
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:9px 20px;border-radius:8px;text-decoration:none;transition:background .15s}
 .nav-cta:hover{background:var(--accent2)}
@@ -37,7 +39,7 @@ nav{position:sticky;top:0;z-index:200;height:60px;background:rgba(244,246,252,0.
 /* ── HERO ── */
 .hero{position:relative;overflow:hidden;padding:88px 0 80px;background:var(--bg)}
 .hero-grid-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
-.hero-inner{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-inner{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1.5fr;gap:3rem;align-items:center}
 .hero-pill{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(43,92,230,0.18);padding:5px 12px;border-radius:20px;margin-bottom:1.5rem}
 .hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
 h1{font-size:clamp(2.2rem,3.8vw,3.3rem);font-weight:700;line-height:1.08;letter-spacing:-0.04em;color:var(--ink);margin-bottom:1.25rem}
@@ -48,7 +50,7 @@ h1 em{font-style:normal;color:var(--accent)}
 .btn-fill:hover{background:var(--accent2)}
 .btn-outline{color:var(--ink2);text-decoration:none;font-size:14px;font-weight:500;border:1px solid var(--line);padding:11px 20px;border-radius:8px;transition:all .15s;background:var(--card)}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
-.hero-trust{display:flex;align-items:center;gap:8px;margin-top:1.75rem;font-size:11.5px;color:var(--ink3)}
+.hero-trust{display:flex;align-items:center;gap:8px;margin-top:1.75rem;font-size:11.5px;color:var(--ink2);font-weight:600}
 .trust-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0}
 
 /* Hero app mockup */
@@ -84,10 +86,10 @@ table.mt tr:hover td{background:var(--bg)}
 /* ── STRIP ── */
 .strip{background:#2C3E6B;padding:36px 0}
 .strip-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.strip-text{font-size:13.5px;color:#fff;letter-spacing:-0.01em;font-weight:600}
-.strip-text strong{color:#fff;font-weight:600}
+.strip-text{font-size:13.5px;color:#fff;letter-spacing:-0.01em;font-weight:700}
+.strip-text strong{color:#fff;font-weight:700}
 .strip-icons{display:flex;gap:2.5rem}
-.strip-icon{display:flex;align-items:center;gap:9px;font-size:12px;color:#fff;font-weight:600}
+.strip-icon{display:flex;align-items:center;gap:9px;font-size:12px;color:#fff;font-weight:700}
 .strip-icon svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
 /* ── FEATURES ── */
@@ -101,21 +103,21 @@ table.mt tr:hover td{background:var(--bg)}
 .feat:hover{background:#F7F9FF}
 .feat-ico{width:36px;height:36px;border-radius:9px;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
 .feat-ico svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.feat h3{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:.4rem;letter-spacing:-0.01em}
-.feat p{font-size:13px;color:var(--ink3);line-height:1.65}
+.feat h3{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:.4rem;letter-spacing:-0.01em}
+.feat p{font-size:13px;color:var(--ink2);line-height:1.65}
 
 /* ── CAROUSEL SECTION ── */
 .carousel-section{background:#2C3E6B;padding:90px 0;overflow:hidden}
 .carousel-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem}
 .carousel-section .eyebrow{color:#93B9FF}
 .carousel-section .sec-h{color:#fff}
-.carousel-section .sec-p{color:rgba(255,255,255,0.42)}
+.carousel-section .sec-p{color:rgba(255,255,255,0.72)}
 
 /* Tab bar */
 .c-tabs{display:flex;gap:2px;margin-top:2.5rem;margin-bottom:2rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:3px}
-.c-tab{flex:1;padding:9px 12px;border-radius:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.35);cursor:pointer;border:none;background:transparent;transition:all .2s;text-align:center;letter-spacing:-0.01em;white-space:nowrap}
-.c-tab.on{background:rgba(255,255,255,0.09);color:#fff}
-.c-tab:hover:not(.on){color:rgba(255,255,255,0.6)}
+.c-tab{flex:1;padding:9px 12px;border-radius:7px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.82);cursor:pointer;border:none;background:transparent;transition:all .2s;text-align:center;letter-spacing:-0.01em;white-space:nowrap}
+.c-tab.on{background:rgba(255,255,255,0.12);color:#fff}
+.c-tab:hover:not(.on){color:#fff}
 
 /* Panels */
 .c-panel{display:none}
@@ -124,7 +126,7 @@ table.mt tr:hover td{background:var(--bg)}
 .c-info{}
 .c-num{font-size:10.5px;font-weight:700;color:#93B9FF;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem}
 .c-title{font-size:1.35rem;font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.2;margin-bottom:.75rem}
-.c-desc{font-size:13.5px;color:rgba(255,255,255,0.42);line-height:1.72;letter-spacing:-0.01em;margin-bottom:1.5rem}
+.c-desc{font-size:13.5px;color:rgba(255,255,255,0.72);line-height:1.72;letter-spacing:-0.01em;margin-bottom:1.5rem}
 .c-pts{display:flex;flex-direction:column;gap:.55rem}
 .c-pt{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,0.5)}
 .c-pt-dot{width:5px;height:5px;border-radius:50%;background:#93B9FF;margin-top:6px;flex-shrink:0}
@@ -165,29 +167,29 @@ table.mt tr:hover td{background:var(--bg)}
 .c-dot.on{background:#93B9FF;width:22px;border-radius:3px}
 
 /* ── WORKFLOW ── */
-.wf-section{background:var(--navy2);padding:80px 0}
+.wf-section{background:var(--bg);padding:80px 0}
 .wf-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem}
-.wf-section .eyebrow{color:#93B9FF}
-.wf-section .sec-h{color:#fff}
-.wf-section .sec-p{color:rgba(255,255,255,0.38)}
-.wf-steps{display:grid;grid-template-columns:repeat(6,1fr);margin-top:2.5rem;border:1px solid rgba(255,255,255,0.07);border-radius:12px;overflow:hidden}
-.wf-step{background:rgba(255,255,255,0.03);padding:1.4rem 1.1rem;border-right:1px solid rgba(255,255,255,0.06)}
+.wf-section .eyebrow{color:var(--accent)}
+.wf-section .sec-h{color:var(--ink)}
+.wf-section .sec-p{color:var(--ink2)}
+.wf-steps{display:grid;grid-template-columns:repeat(6,1fr);margin-top:2.5rem;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.wf-step{background:var(--card);padding:1.4rem 1.1rem;border-right:1px solid var(--line)}
 .wf-step:last-child{border-right:none}
-.wf-n{font-size:10px;font-weight:600;color:rgba(255,255,255,0.22);letter-spacing:.08em;margin-bottom:.65rem}
-.wf-d{font-size:12px;letter-spacing:1.5px;margin-bottom:.65rem;color:rgba(255,255,255,0.65);line-height:1;font-family:monospace}
-.wf-d .e{color:rgba(255,255,255,0.1)}.wf-d .x{color:rgba(255,255,255,0.28)}
-.wf-step h4{font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:.3rem;letter-spacing:-0.01em}
-.wf-step p{font-size:11px;color:rgba(255,255,255,0.26);line-height:1.55}
-.wf-step.act{background:rgba(43,92,230,0.12);border-top:2px solid #93B9FF}
-.wf-step.act .wf-n{color:#93B9FF}
-.wf-step.act h4{color:#fff}
+.wf-n{font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:.08em;margin-bottom:.65rem}
+.wf-d{font-size:12px;letter-spacing:1.5px;margin-bottom:.65rem;color:var(--ink);line-height:1;font-family:monospace}
+.wf-d .e{color:var(--line)}.wf-d .x{color:var(--ink3)}
+.wf-step h4{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:.3rem;letter-spacing:-0.01em}
+.wf-step p{font-size:11px;color:var(--ink2);line-height:1.55}
+.wf-step.act{background:var(--accent-bg);border-top:2px solid var(--accent)}
+.wf-step.act .wf-n{color:var(--accent)}
+.wf-step.act h4{color:var(--ink)}
 
 /* ── STATS ── */
 .stats{background:var(--accent);padding:56px 0}
 .stats-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 .stat{text-align:center}
 .stat-n{font-size:2.6rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-0.04em}
-.stat-l{font-size:11px;color:rgba(255,255,255,0.55);margin-top:8px;letter-spacing:.06em;text-transform:uppercase}
+.stat-l{font-size:11px;color:rgba(255,255,255,0.82);margin-top:8px;letter-spacing:.06em;text-transform:uppercase}
 
 /* ── CTA ── */
 .cta{background:var(--bg);padding:96px 2.5rem;text-align:center}
@@ -196,6 +198,27 @@ table.mt tr:hover td{background:var(--bg)}
 .cta p{font-size:15px;color:var(--ink3);margin-bottom:2rem;letter-spacing:-0.01em;line-height:1.7}
 .btn-cta{background:var(--accent);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;display:inline-block}
 .btn-cta:hover{background:var(--accent2)}
+
+/* ── KONTAKT ── */
+.kontakt-section{background:var(--bg);padding:80px 0;border-top:1px solid var(--line)}
+.kontakt-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem}
+.kontakt-top{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem}
+.kontakt-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:18px;text-decoration:none;transition:box-shadow .15s,border-color .15s}
+.kontakt-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(43,92,230,0.08)}
+.kontakt-card-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.kontakt-card-icon svg{width:22px;height:22px;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.kontakt-card-label{font-size:11px;font-weight:700;color:var(--ink3);letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+.kontakt-card-val{font-size:14px;font-weight:600;color:var(--ink)}
+.kontakt-body{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:36px 40px}
+.kontakt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.kontakt-field{display:flex;flex-direction:column;gap:6px}
+.kontakt-field.full{grid-column:1/-1}
+.kontakt-field label{font-size:11px;font-weight:700;color:var(--ink2);letter-spacing:.05em;text-transform:uppercase}
+.kontakt-field input,.kontakt-field textarea{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:13.5px;color:var(--ink);font-family:inherit;outline:none;transition:border-color .15s;resize:none}
+.kontakt-field input:focus,.kontakt-field textarea:focus{border-color:var(--accent)}
+.kontakt-field textarea{min-height:110px}
+.kontakt-submit{margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.kontakt-note{font-size:12px;color:var(--ink3)}
 
 /* ── FOOTER ── */
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);padding:0}
@@ -216,8 +239,8 @@ footer nav a:hover{color:#fff}
   .c-panel.on{grid-template-columns:1fr}
   .wf-section{padding:60px 0}.wf-inner{padding:0 1.25rem}
   .wf-steps{grid-template-columns:1fr 1fr}
-  .wf-step{border-right:none;border-bottom:1px solid rgba(255,255,255,0.05)}
-  .wf-step:nth-child(odd){border-right:1px solid rgba(255,255,255,0.05)}
+  .wf-step{border-right:none;border-bottom:1px solid var(--line)}
+  .wf-step:nth-child(odd){border-right:1px solid var(--line)}
   .stats{padding:56px 0}.stats-inner{grid-template-columns:repeat(2,1fr);padding:0 1.25rem}
   .cta{padding:56px 1.25rem}
   .strip-inner{flex-direction:column;gap:1.5rem}
@@ -240,79 +263,25 @@ footer nav a:hover{color:#fff}
       <li><a href="#workflow">Workflow</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
-    <a href="#kontakt" class="nav-cta">Zatražite demo &rarr;</a>
+    <a href="mailto:contact@codefive.rs" class="nav-cta">Zatražite demo &rarr;</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-grid-bg">
-    <svg width="100%" height="100%" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <g stroke="rgba(43,92,230,0.05)" stroke-width="1">
-        <line x1="0" y1="90" x2="1440" y2="90"/><line x1="0" y1="180" x2="1440" y2="180"/>
-        <line x1="0" y1="270" x2="1440" y2="270"/><line x1="0" y1="360" x2="1440" y2="360"/>
-        <line x1="0" y1="450" x2="1440" y2="450"/><line x1="0" y1="540" x2="1440" y2="540"/>
-        <line x1="160" y1="0" x2="160" y2="680"/><line x1="320" y1="0" x2="320" y2="680"/>
-        <line x1="480" y1="0" x2="480" y2="680"/><line x1="640" y1="0" x2="640" y2="680"/>
-        <line x1="800" y1="0" x2="800" y2="680"/><line x1="960" y1="0" x2="960" y2="680"/>
-        <line x1="1120" y1="0" x2="1120" y2="680"/><line x1="1280" y1="0" x2="1280" y2="680"/>
-      </g>
-      <!-- PP aparat silhouette -->
-      <g transform="translate(1170,30) scale(0.8)" opacity="0.045" fill="#2B5CE6">
-        <ellipse cx="80" cy="110" rx="55" ry="18"/>
-        <rect x="25" y="108" width="110" height="380" rx="55"/>
-        <ellipse cx="80" cy="488" rx="55" ry="18"/>
-        <rect x="55" y="72" width="50" height="50" rx="8"/>
-        <ellipse cx="80" cy="72" rx="25" ry="10"/>
-        <rect x="30" y="42" width="100" height="18" rx="9"/>
-        <rect x="72" y="18" width="16" height="30" rx="8"/>
-        <path d="M130 60 Q200 40 220 100 Q240 155 195 175" stroke="#2B5CE6" stroke-width="16" fill="none" stroke-linecap="round"/>
-        <ellipse cx="80" cy="498" rx="70" ry="22"/>
-        <circle cx="80" cy="160" r="22" stroke="#2B5CE6" stroke-width="7" fill="none"/>
-        <line x1="80" y1="145" x2="80" y2="160" stroke="#2B5CE6" stroke-width="5" stroke-linecap="round"/>
-        <line x1="80" y1="160" x2="94" y2="168" stroke="#2B5CE6" stroke-width="5" stroke-linecap="round"/>
-      </g>
-      <circle cx="1250" cy="340" r="250" fill="url(#hg)"/>
-      <defs><radialGradient id="hg" cx="50%" cy="50%"><stop offset="0%" stop-color="#2B5CE6" stop-opacity="0.07"/><stop offset="100%" stop-color="#2B5CE6" stop-opacity="0"/></radialGradient></defs>
-      <circle cx="910" cy="130" r="2.5" fill="rgba(43,92,230,0.25)"/>
-      <circle cx="1060" cy="75" r="1.5" fill="rgba(43,92,230,0.2)"/>
-      <circle cx="1340" cy="200" r="2" fill="rgba(43,92,230,0.22)"/>
-    </svg>
-  </div>
   <div class="hero-inner">
     <div>
       <div class="hero-pill"><span class="hero-pill-dot"></span>Protivpožarna zaštita &middot; SaaS &middot; RS</div>
       <h1>Kontrolisanje.<br>Dokumentacija.<br><em>Automatski.</em></h1>
       <p class="hero-sub">FlowBiz digitalizuje celokupan proces kontrolisanja PP sistema — od evidencije protivpožarnih uređaja do zakonski usklađenih isprava.</p>
       <div class="hero-btns">
-        <a href="#kontakt" class="btn-fill">Zatražite demo &rarr;</a>
+        <a href="mailto:contact@codefive.rs" class="btn-fill">Zatražite demo &rarr;</a>
         <a href="#carousel" class="btn-outline">Pogledajte aplikaciju</a>
       </div>
       <div class="hero-trust"><span class="trust-dot"></span>Usklađeno sa pravilnicima RS &nbsp;&middot;&nbsp; Multi-tenant &nbsp;&middot;&nbsp; Offline rad</div>
     </div>
-    <div class="app-mock">
-      <div class="mock-bar"><div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div><span class="mock-label">FlowBiz &mdash; Plan dospeća</span></div>
-      <div class="kpis">
-        <div class="kpi"><div class="kv kv-r">3</div><div class="kl">Kritično &le;7d</div></div>
-        <div class="kpi"><div class="kv kv-a">11</div><div class="kl">Ističe &lt;30d</div></div>
-        <div class="kpi"><div class="kv kv-g">42</div><div class="kl">Aktivno</div></div>
-        <div class="kpi"><div class="kv kv-s">7</div><div class="kl">Isteklo</div></div>
-      </div>
-      <div class="tbar"><span class="tbar-t">Isprave</span><span class="tag tag-b">Danas</span></div>
-      <table class="mt">
-        <thead><tr><th>Isprava</th><th>Klijent</th><th>Status</th><th>Rok</th></tr></thead>
-        <tbody>
-          <tr><td class="td-b">#2024-041</td><td>Metaloprom d.o.o.</td><td><span class="tag tag-r">Kritično</span></td><td style="color:var(--red);font-weight:600">3 dana</td></tr>
-          <tr><td class="td-b">#2024-038</td><td>Grad Novi Sad</td><td><span class="tag tag-g">Završeno</span></td><td style="color:var(--ink3)">&mdash;</td></tr>
-          <tr><td class="td-b">#2024-036</td><td>Beograd Arena</td><td><span class="tag tag-a">U pripremi</span></td><td style="color:var(--amber);font-weight:600">18 dana</td></tr>
-          <tr><td class="td-b">#2024-033</td><td>TC Ušće</td><td><span class="tag tag-b">Kontrola</span></td><td style="color:var(--ink2)">25 dana</td></tr>
-        </tbody>
-      </table>
-      <div class="wf-bar">
-        <span style="font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase">Status</span>
-        <span class="wf-mono"><span>&#9679;&#9679;&#9679;</span><span class="em">&#9675;&#9675;</span></span>
-        <span class="wf-tag">Kontrola u toku</span>
-      </div>
+    <div class="app-mock" style="padding:0;overflow:hidden;box-shadow:0 8px 40px rgba(15,22,41,0.14)">
+      <img src="screen-dashboard.png" style="width:100%;display:block;border-radius:14px" alt="FlowBiz Dashboard">
     </div>
   </div>
 </div>
@@ -352,7 +321,7 @@ footer nav a:hover{color:#fff}
   <div class="carousel-inner">
     <div class="eyebrow">Aplikacija u akciji</div>
     <div class="sec-h">Vidite pre nego što odlučite.</div>
-    <div class="sec-p">Pravi ekrani i dokumenta generisana iz FlowBiz-a — onakvi kakvi izgledaju u svakodnevnom radu.</div>
+    <div class="sec-p" style="white-space:nowrap">Pravi ekrani i dokumenta generisana iz FlowBiz-a — onakvi kakvi izgledaju u svakodnevnom radu.</div>
 
     <div class="c-tabs">
       <button class="c-tab on" onclick="show(0)">Isprava (ekran)</button>
@@ -377,7 +346,6 @@ footer nav a:hover{color:#fff}
         </div>
       </div>
       <div class="browser">
-        <div class="browser-bar"><div class="b-dots"><div class="b-dot b-dot-r"></div><div class="b-dot b-dot-y"></div><div class="b-dot b-dot-g"></div></div><div class="b-url">app.flowbiz.rs/isprave/1/2026</div></div>
         <img src="screen1.png" class="b-img" alt="Isprava">
       </div>
     </div>
@@ -396,7 +364,6 @@ footer nav a:hover{color:#fff}
         </div>
       </div>
       <div class="browser">
-        <div class="browser-bar"><div class="b-dots"><div class="b-dot b-dot-r"></div><div class="b-dot b-dot-y"></div><div class="b-dot b-dot-g"></div></div><div class="b-url">app.flowbiz.rs/isprave/1/2026/audit</div></div>
         <img src="screen2.png" class="b-img" alt="Audit trail">
       </div>
     </div>
@@ -415,7 +382,6 @@ footer nav a:hover{color:#fff}
         </div>
       </div>
       <div class="browser">
-        <div class="browser-bar"><div class="b-dots"><div class="b-dot b-dot-r"></div><div class="b-dot b-dot-y"></div><div class="b-dot b-dot-g"></div></div><div class="b-url">app.flowbiz.rs/radni-nalog/merenja</div></div>
         <img src="screen3.png" class="b-img" alt="Merenja">
       </div>
     </div>
@@ -434,7 +400,6 @@ footer nav a:hover{color:#fff}
         </div>
       </div>
       <div class="browser">
-        <div class="browser-bar"><div class="b-dots"><div class="b-dot b-dot-r"></div><div class="b-dot b-dot-y"></div><div class="b-dot b-dot-g"></div></div><div class="b-url">app.flowbiz.rs/radni-nalog/metode</div></div>
         <img src="screen4.png" class="b-img" alt="Metode">
       </div>
     </div>
@@ -453,7 +418,6 @@ footer nav a:hover{color:#fff}
         </div>
       </div>
       <div class="browser">
-        <div class="browser-bar"><div class="b-dots"><div class="b-dot b-dot-r"></div><div class="b-dot b-dot-y"></div><div class="b-dot b-dot-g"></div></div><div class="b-url">app.flowbiz.rs/isprave/2/2026/pdf</div></div>
         <div style="padding:16px;background:#fff">
           <div class="pdf-card">
             <div class="pdf-header">
@@ -502,7 +466,6 @@ footer nav a:hover{color:#fff}
         </div>
       </div>
       <div class="browser">
-        <div class="browser-bar"><div class="b-dots"><div class="b-dot b-dot-r"></div><div class="b-dot b-dot-y"></div><div class="b-dot b-dot-g"></div></div><div class="b-url">app.flowbiz.rs/isprave/3/2026/pdf</div></div>
         <div style="padding:16px;background:#fff">
           <div class="pdf-card">
             <div class="pdf-header">
@@ -550,8 +513,8 @@ footer nav a:hover{color:#fff}
 <div class="wf-section" id="workflow">
   <div class="wf-inner">
     <div class="eyebrow">Workflow</div>
-    <div class="sec-h">Od rezervacije do<br>završene isprave.</div>
-    <div class="sec-p">Svaka isprava prolazi kroz jasan, kontrolisan tok — bez propuštenih koraka i nejasnih odgovornosti.</div>
+    <div class="sec-h">Od zahteva za kontrolisanje do završene isprave.</div>
+    <div class="sec-p" style="max-width:none;white-space:nowrap">Svaka isprava prolazi kroz jasan, kontrolisan tok — bez propuštenih koraka i nejasnih odgovornosti.</div>
     <div class="wf-steps">
       <div class="wf-step"><div class="wf-n">01</div><div class="wf-d"><span>&#9679;</span><span class="e">&#9675;&#9675;&#9675;&#9675;</span></div><h4>U pripremi</h4><p>Rezervacija broja, unos podataka, zahtev za kontrolisanje.</p></div>
       <div class="wf-step"><div class="wf-n">02</div><div class="wf-d"><span>&#9679;&#9679;</span><span class="e">&#9675;&#9675;&#9675;</span></div><h4>Spremno</h4><p>Zahtev poslat klijentu. Čeka se potvrda termina.</p></div>
@@ -567,31 +530,85 @@ footer nav a:hover{color:#fff}
 <div class="stats">
   <div class="stats-inner">
     <div class="stat"><div class="stat-n">200+</div><div class="stat-l">Objekata mesečno</div></div>
-    <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Usklađenost RS</div></div>
-    <div class="stat"><div class="stat-n">0</div><div class="stat-l">Ručnih grešaka</div></div>
-    <div class="stat"><div class="stat-n">&infin;</div><div class="stat-l">Audit istorija</div></div>
+    <div class="stat"><div class="stat-n">12+</div><div class="stat-l">Propisnih zahteva pokriveno</div></div>
+    <div class="stat"><div class="stat-n">&ndash;70%</div><div class="stat-l">Manji rizik grešaka</div></div>
+    <div class="stat"><div class="stat-n">24/7</div><div class="stat-l">Dostupna audit istorija</div></div>
   </div>
 </div>
 
-<!-- CTA -->
-<div class="cta" id="kontakt">
-  <div class="cta-inner">
-    <h2>Spremi za digitalizaciju?</h2>
-    <p>Pokažite nam vaš trenutni proces &mdash; predložićemo implementaciju bez komplikacija.</p>
-    <a href="/cdn-cgi/l/email-protection#ceada1a0baafadba8eada1aaaba8a7b8abe0bcbd" class="btn-cta">Zatražite demo &rarr;</a>
+<!-- KONTAKT -->
+<div class="kontakt-section" id="kontakt">
+  <div class="kontakt-inner">
+    <div class="eyebrow" style="color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Kontakt</div>
+    <div class="sec-h" style="color:var(--ink);margin-bottom:.5rem">Razgovarajmo.</div>
+    <div class="sec-p" style="margin-bottom:2.5rem">Pošaljite upit ili zatražite demo — odgovaramo u roku od 24h.</div>
+
+    <div class="kontakt-top">
+      <a href="mailto:contact@codefive.rs" class="kontakt-card">
+        <div class="kontakt-card-icon" style="background:#EEF3FF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B5CE6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        </div>
+        <div>
+          <div class="kontakt-card-label">Email</div>
+          <div class="kontakt-card-val">contact@codefive.rs</div>
+        </div>
+      </a>
+      <a href="mailto:contact@codefive.rs?subject=Demo zahtev" class="kontakt-card">
+        <div class="kontakt-card-icon" style="background:#E8FBF4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0D9E6A"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+        </div>
+        <div>
+          <div class="kontakt-card-label">Zakažite demo</div>
+          <div class="kontakt-card-val">Besplatno &middot; 30 min</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="kontakt-body">
+      <form id="kf" novalidate>
+        <input type="hidden" name="access_key" value="eb297555-dbdc-437f-8317-a62138e01276">
+        <input type="hidden" name="subject" value="FlowBiz — novi upit sa sajta">
+        <input type="hidden" name="from_name" value="FlowBiz Sajt">
+        <div class="kontakt-grid">
+          <div class="kontakt-field">
+            <label for="kf-ime">Ime i prezime</label>
+            <input type="text" id="kf-ime" name="name" placeholder="Marko Marković" required>
+          </div>
+          <div class="kontakt-field">
+            <label for="kf-firma">Firma</label>
+            <input type="text" id="kf-firma" name="firma" placeholder="PP Servis d.o.o.">
+          </div>
+          <div class="kontakt-field full">
+            <label for="kf-email">Email adresa</label>
+            <input type="email" id="kf-email" name="email" placeholder="marko@firma.rs" required>
+          </div>
+          <div class="kontakt-field full">
+            <label for="kf-poruka">Poruka</label>
+            <textarea id="kf-poruka" name="message" placeholder="Kratko opišite vaš trenutni proces ili šta vas zanima..." required></textarea>
+          </div>
+        </div>
+        <div class="kontakt-submit">
+          <span class="kontakt-note" id="kf-note">&#10003; Bez obaveza &nbsp;&middot;&nbsp; &#10003; Odgovor za 24h</span>
+          <button type="submit" id="kf-btn" class="btn-cta">Pošaljite poruku &rarr;</button>
+        </div>
+      </form>
+      <div id="kf-success" style="display:none;text-align:center;padding:48px 0">
+        <div style="width:52px;height:52px;background:#E8FBF4;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D9E6A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div style="font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px">Poruka je poslata!</div>
+        <div style="font-size:13.5px;color:var(--ink3)">Javićemo vam se na email u roku od 24h.</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <footer>
   <div class="footer-inner">
-    <div class="ft-logo">
-      <img src="logo-dark.png" alt="Code Five">
-      <span class="ft-logo-text">FlowBiz</span>
-    </div>
     <p>Sva prava zadržana &copy; 2025 Code Five</p>
     <nav>
       <a href="https://codefive.rs">codefive.rs</a>
-      <a href="/cdn-cgi/l/email-protection#4f2c20213b2e2c3b0f2c202b2a2926392a613d3c">Kontakt</a>
+      <a href="mailto:contact@codefive.rs">Kontakt</a>
     </nav>
   </div>
 </footer>
@@ -609,6 +626,40 @@ document.addEventListener("DOMContentLoaded",function(){
   document.querySelectorAll(".c-dot").forEach(function(dot,i){
     dot.addEventListener("click",function(){show(i);});
   });
+});
+</script>
+
+<script>
+document.getElementById('kf').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('kf-btn');
+  const note = document.getElementById('kf-note');
+
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+
+  btn.disabled = true;
+  btn.textContent = 'Šalje se…';
+  note.textContent = '';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(this)))
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('kf').style.display = 'none';
+      document.getElementById('kf-success').style.display = 'block';
+    } else {
+      throw new Error(data.message || 'Greška');
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = 'Pošaljite poruku →';
+    note.textContent = 'Došlo je do greške — pokušajte ponovo ili nas kontaktirajte direktno.';
+    note.style.color = '#D93025';
+  }
 });
 </script>
 </body>
