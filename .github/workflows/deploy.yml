@@ -11,7 +11,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/codefive-website:latest
+  IMAGE_NAME: ghcr.io/codefive-flowbiz/codefive-website:latest
 
 jobs:
   build:

@@ -1,6 +1,6 @@
 services:
   web:
-    image: ghcr.io/bajceticnenad/codefive-website:latest
+    image: ghcr.io/codefive-flowbiz/codefive-website:latest
     container_name: codefive-website
     restart: unless-stopped
     ports:
