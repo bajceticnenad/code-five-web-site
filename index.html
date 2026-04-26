@@ -24,11 +24,12 @@
 html{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 
 /* ── NAV ── */
-body>nav{position:sticky;top:0;z-index:200;height:60px;background:rgba(244,246,252,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+body>nav{position:sticky;top:0;z-index:200;height:60px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem;height:60px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{display:flex;align-items:center;gap:10px}
-.nav-logo img{height:36px;width:auto}
-.nav-logo-text{font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-0.02em}
+.nav-logo{display:flex;align-items:center;gap:2px;text-decoration:none;cursor:pointer}
+.nav-logo img{height:72px;width:auto;mix-blend-mode:multiply;clip-path:inset(5px 6px)}
+.nav-logo-sep{width:1px;height:28px;background:var(--line);margin:0 6px 0 0;flex-shrink:0}
+.nav-logo-text{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-0.02em}
 .nav-logo-text span{color:var(--accent)}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:15px;color:var(--ink2);text-decoration:none;font-weight:700;transition:color .15s}
@@ -40,8 +41,8 @@ body>nav{position:sticky;top:0;z-index:200;height:60px;background:rgba(244,246,2
 .hero{position:relative;overflow:hidden;padding:88px 0 80px;background:var(--bg)}
 .hero-grid-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
 .hero-inner{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1.5fr;gap:3rem;align-items:center}
-.hero-pill{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(43,92,230,0.18);padding:5px 12px;border-radius:20px;margin-bottom:1.5rem}
-.hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.hero-pill{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--ink);background:var(--accent-bg);border:1px solid rgba(43,92,230,0.18);padding:5px 12px;border-radius:20px;margin-bottom:1.5rem}
+.hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--ink);flex-shrink:0}
 h1{font-size:clamp(2.2rem,3.8vw,3.3rem);font-weight:700;line-height:1.08;letter-spacing:-0.04em;color:var(--ink);margin-bottom:1.25rem}
 h1 em{font-style:normal;color:var(--accent)}
 .hero-sub{font-size:16px;color:var(--ink2);line-height:1.75;font-weight:400;margin-bottom:2rem;max-width:400px;letter-spacing:-0.01em}
@@ -109,9 +110,9 @@ table.mt tr:hover td{background:var(--bg)}
 /* ── CAROUSEL SECTION ── */
 .carousel-section{background:#2C3E6B;padding:90px 0;overflow:hidden}
 .carousel-inner{max-width:1080px;margin:0 auto;padding:0 2.5rem}
-.carousel-section .eyebrow{color:#93B9FF}
+.carousel-section .eyebrow{color:#fff;font-size:13px;letter-spacing:.15em}
 .carousel-section .sec-h{color:#fff}
-.carousel-section .sec-p{color:rgba(255,255,255,0.72)}
+.carousel-section .sec-p{color:rgba(255,255,255,0.95)}
 
 /* Tab bar */
 .c-tabs{display:flex;gap:2px;margin-top:2.5rem;margin-bottom:2rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:3px}
@@ -221,30 +222,112 @@ table.mt tr:hover td{background:var(--bg)}
 .kontakt-note{font-size:12px;color:var(--ink3)}
 
 /* ── FOOTER ── */
-footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);padding:0}
-.footer-inner{max-width:1080px;margin:0 auto;padding:1.75rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
-.ft-logo{display:flex;align-items:center;gap:9px}
-.ft-logo img{height:30px;width:auto}
-.ft-logo-text{font-size:15px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:-0.02em}
-footer p{font-size:12px;color:rgba(255,255,255,0.22)}
-footer nav a{font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none;margin-left:1.5rem;transition:color .15s}
-footer nav a:hover{color:#fff}
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);padding:0}
+.footer-inner{max-width:1080px;margin:0 auto;padding:2.5rem 2.5rem 2rem;display:flex;justify-content:space-between;align-items:flex-start;gap:3rem}
+.ft-left{flex:1}
+.ft-logo{display:flex;align-items:center;gap:6px;margin-bottom:1rem}
+.ft-logo img{height:70px;width:auto;clip-path:inset(6px 10px)}
+.ft-logo-sep{width:1px;height:22px;background:rgba(255,255,255,0.2);margin:0 4px 0 0;flex-shrink:0}
+.ft-logo-text{font-size:14px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:-0.02em}
+.ft-desc{font-size:13px;color:rgba(255,255,255,0.82);line-height:1.7;max-width:300px}
+.ft-nav{display:flex;flex-direction:column;gap:.55rem;min-width:130px}
+.ft-nav-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:.4rem}
+.ft-nav a{font-size:13px;color:rgba(255,255,255,0.85);text-decoration:none;transition:color .15s}
+.ft-nav a:hover{color:#fff}
+.ft-contact{min-width:180px}
+.ft-contact-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:.75rem}
+.ft-contact a{display:block;font-size:13px;color:rgba(255,255,255,0.85);text-decoration:none;transition:color .15s;margin-bottom:.4rem}
+.ft-contact a:hover{color:#fff}
+.footer-bottom{max-width:1080px;margin:0 auto;padding:1.25rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.35)}
+.footer-bottom a{font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color .15s}
+.footer-bottom a:hover{color:#fff}
+
+/* ── SCROLL TO TOP ── */
+.scroll-top{position:fixed;bottom:2rem;right:2rem;z-index:300;width:44px;height:44px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(43,92,230,0.35);opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s,background .15s;pointer-events:none}
+.scroll-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.scroll-top:hover{background:var(--accent2)}
+.scroll-top svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;width:36px;height:36px}
+.hamburger span{display:block;height:2px;border-radius:2px;background:var(--ink);transition:all .25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);z-index:199;padding:.5rem 0;box-shadow:0 8px 24px rgba(15,22,41,0.1)}
+.mobile-menu.open{display:flex}
+.mob-link{padding:14px 1.5rem;font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.mob-link:last-of-type{border-bottom:none}
+.mob-cta{margin:1rem 1.5rem;background:var(--accent);color:#fff;padding:13px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;text-align:center}
 
 @media(max-width:768px){
-  .nav-inner{padding:0 1.25rem}.nav-links{display:none}
-  .hero{padding:72px 0 56px}.hero-inner{grid-template-columns:1fr;gap:2.5rem;padding:0 1.25rem}
-  .section{padding:60px 0}.section-inner{padding:0 1.25rem}.feat-grid{grid-template-columns:1fr}
-  .carousel-section{padding:60px 0}.carousel-inner{padding:0 1.25rem}
-  .c-tabs{flex-direction:column}
+  /* Nav */
+  .nav-inner{padding:0 1.25rem}
+  .nav-links{display:none}
+  .nav-cta-desktop{display:none}
+  .hamburger{display:flex}
+
+  /* Hero */
+  .hero{padding:64px 0 48px}
+  .hero-inner{grid-template-columns:1fr;gap:2rem;padding:0 1.25rem}
+  .hero-sub{max-width:100%}
+  h1{font-size:clamp(2rem,8vw,2.8rem)}
+
+  /* Strip */
+  .strip-inner{flex-direction:column;gap:1.25rem;padding:0 1.25rem}
+  .strip-icons{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+  /* Features */
+  .section{padding:56px 0}
+  .section-inner{padding:0 1.25rem}
+  .feat-grid{grid-template-columns:1fr}
+
+  /* Carousel */
+  .carousel-section{padding:56px 0}
+  .carousel-inner{padding:0 1.25rem}
+  .c-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+  .c-tab{font-size:11px;padding:8px 6px}
   .c-panel.on{grid-template-columns:1fr}
-  .wf-section{padding:60px 0}.wf-inner{padding:0 1.25rem}
-  .wf-steps{grid-template-columns:1fr 1fr}
+  .b-img{max-height:280px}
+
+  /* Workflow */
+  .wf-section{padding:56px 0}
+  .wf-inner{padding:0 1.25rem}
+  .wf-steps{grid-template-columns:1fr}
   .wf-step{border-right:none;border-bottom:1px solid var(--line)}
-  .wf-step:nth-child(odd){border-right:1px solid var(--line)}
-  .stats{padding:56px 0}.stats-inner{grid-template-columns:repeat(2,1fr);padding:0 1.25rem}
+  .wf-step:nth-child(odd){border-right:none}
+
+  /* Stats */
+  .stats{padding:48px 0}
+  .stats-inner{grid-template-columns:repeat(2,1fr);padding:0 1.25rem;gap:1.5rem}
+  .stat-n{font-size:2rem}
+
+  /* CTA */
   .cta{padding:56px 1.25rem}
-  .strip-inner{flex-direction:column;gap:1.5rem}
-  .footer-inner{flex-direction:column;gap:1rem;text-align:center}
+
+  /* Kontakt */
+  .kontakt-inner{padding:0 1.25rem}
+  .kontakt-top{grid-template-columns:1fr}
+  .kontakt-body{padding:24px 20px}
+  .kontakt-grid{grid-template-columns:1fr}
+  .kontakt-submit{flex-direction:column;align-items:stretch;gap:.75rem}
+  .btn-cta{text-align:center}
+
+  /* Footer */
+  .footer-inner{flex-direction:column;gap:2rem;padding:2rem 1.25rem}
+  .ft-nav{flex-direction:row;flex-wrap:wrap;gap:.5rem 1.5rem}
+  .ft-nav-title{width:100%}
+  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center;padding:1.25rem}
+
+  /* Scroll to top */
+  .scroll-top{bottom:1.25rem;right:1.25rem}
+}
+
+@media(max-width:390px){
+  .c-tabs{grid-template-columns:1fr}
+  .strip-icons{grid-template-columns:1fr 1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -253,32 +336,43 @@ footer nav a:hover{color:#fff}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">
+    <a href="#" class="nav-logo">
         <img src="logo.png" alt="Code Five">
+        <div class="nav-logo-sep"></div>
         <span class="nav-logo-text">Flow<span>Biz</span></span>
-      </div>
+      </a>
     <ul class="nav-links">
       <li><a href="#features">Funkcionalnosti</a></li>
       <li><a href="#carousel">Aplikacija</a></li>
       <li><a href="#workflow">Workflow</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
-    <a href="mailto:contact@codefive.rs" class="nav-cta">Zatražite demo &rarr;</a>
+    <a href="mailto:contact@codefive.rs" class="nav-cta nav-cta-desktop">Zatražite demo &rarr;</a>
+    <button class="hamburger" id="hamburger" aria-label="Meni">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features" class="mob-link">Funkcionalnosti</a>
+  <a href="#carousel" class="mob-link">Aplikacija</a>
+  <a href="#workflow" class="mob-link">Workflow</a>
+  <a href="#kontakt" class="mob-link">Kontakt</a>
+  <a href="mailto:contact@codefive.rs" class="mob-cta">Zatražite demo &rarr;</a>
+</div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-pill"><span class="hero-pill-dot"></span>Protivpožarna zaštita &middot; SaaS &middot; RS</div>
+      <div class="hero-pill"><span class="hero-pill-dot"></span>Protivpožarna zaštita &middot; SaaS</div>
       <h1>Kontrolisanje.<br>Dokumentacija.<br><em>Automatski.</em></h1>
       <p class="hero-sub">FlowBiz digitalizuje celokupan proces kontrolisanja PP sistema — od evidencije protivpožarnih uređaja do zakonski usklađenih isprava.</p>
       <div class="hero-btns">
         <a href="mailto:contact@codefive.rs" class="btn-fill">Zatražite demo &rarr;</a>
         <a href="#carousel" class="btn-outline">Pogledajte aplikaciju</a>
       </div>
-      <div class="hero-trust"><span class="trust-dot"></span>Usklađeno sa pravilnicima RS &nbsp;&middot;&nbsp; Multi-tenant &nbsp;&middot;&nbsp; Offline rad</div>
+      <div class="hero-trust"><span class="trust-dot"></span>Usklađeno sa regulativom RS &nbsp;&middot;&nbsp; Multi-tenant &nbsp;&middot;&nbsp; Offline rad</div>
     </div>
     <div class="app-mock" style="padding:0;overflow:hidden;box-shadow:0 8px 40px rgba(15,22,41,0.14)">
       <img src="screen-dashboard.png" style="width:100%;display:block;border-radius:14px" alt="FlowBiz Dashboard">
@@ -304,7 +398,7 @@ footer nav a:hover{color:#fff}
   <div class="section-inner">
     <div class="eyebrow">Funkcionalnosti</div>
     <div class="sec-h">Digitalna kontrola.<br>Zakonska isprava.</div>
-    <div class="sec-p" style="max-width:none;white-space:nowrap">Dizajnirano za brzinu rada kontrolora na terenu i preciznost administratora u kancelariji.</div>
+    <div class="sec-p" style="max-width:none">Dizajnirano za brzinu rada kontrolora na terenu i preciznost administratora u kancelariji.</div>
     <div class="feat-grid">
       <div class="feat"><div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div><h3>Zakonska usklađenost</h3><p>Automatska primena pravilnika RS. Svaka isprava generiše se prema važećim propisima.</p></div>
       <div class="feat"><div class="feat-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Plan dospeća</h3><p>Pregled svih isprava sa KPI indikatorima. Kritični rokovi istaknuti, akcija dostupna na jedan klik.</p></div>
@@ -321,7 +415,7 @@ footer nav a:hover{color:#fff}
   <div class="carousel-inner">
     <div class="eyebrow">Aplikacija u akciji</div>
     <div class="sec-h">Vidite pre nego što odlučite.</div>
-    <div class="sec-p" style="white-space:nowrap">Pravi ekrani i dokumenta generisana iz FlowBiz-a — onakvi kakvi izgledaju u svakodnevnom radu.</div>
+    <div class="sec-p">Pravi ekrani i dokumenta generisana iz FlowBiz-a — onakvi kakvi izgledaju u svakodnevnom radu.</div>
 
     <div class="c-tabs">
       <button class="c-tab on" onclick="show(0)">Isprava (ekran)</button>
@@ -514,7 +608,7 @@ footer nav a:hover{color:#fff}
   <div class="wf-inner">
     <div class="eyebrow">Workflow</div>
     <div class="sec-h">Od zahteva za kontrolisanje do završene isprave.</div>
-    <div class="sec-p" style="max-width:none;white-space:nowrap">Svaka isprava prolazi kroz jasan, kontrolisan tok — bez propuštenih koraka i nejasnih odgovornosti.</div>
+    <div class="sec-p" style="max-width:none">Svaka isprava prolazi kroz jasan, kontrolisan tok — bez propuštenih koraka i nejasnih odgovornosti.</div>
     <div class="wf-steps">
       <div class="wf-step"><div class="wf-n">01</div><div class="wf-d"><span>&#9679;</span><span class="e">&#9675;&#9675;&#9675;&#9675;</span></div><h4>U pripremi</h4><p>Rezervacija broja, unos podataka, zahtev za kontrolisanje.</p></div>
       <div class="wf-step"><div class="wf-n">02</div><div class="wf-d"><span>&#9679;&#9679;</span><span class="e">&#9675;&#9675;&#9675;</span></div><h4>Spremno</h4><p>Zahtev poslat klijentu. Čeka se potvrda termina.</p></div>
@@ -603,13 +697,34 @@ footer nav a:hover{color:#fff}
   </div>
 </div>
 
+<button class="scroll-top" id="scrollTop" aria-label="Nazad na vrh">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <footer>
   <div class="footer-inner">
-    <p>Sva prava zadržana &copy; 2025 Code Five</p>
-    <nav>
+    <div class="ft-left">
+      <div class="ft-logo">
+        <img src="logo-dark.png" alt="Code Five">
+      </div>
+      <p class="ft-desc">Digitalna platforma za kontrolisanje protivpožarnih sistema u Republici Srbiji. Usklađeno sa regulativom RS.</p>
+    </div>
+    <div class="ft-nav">
+      <div class="ft-nav-title">Navigacija</div>
+      <a href="#features">Funkcionalnosti</a>
+      <a href="#carousel">Aplikacija</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="ft-contact">
+      <div class="ft-contact-title">Kontakt</div>
+      <a href="mailto:contact@codefive.rs">contact@codefive.rs</a>
       <a href="https://codefive.rs">codefive.rs</a>
-      <a href="mailto:contact@codefive.rs">Kontakt</a>
-    </nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Sva prava zadržana &copy; 2025 Code Five</p>
+    <a href="mailto:contact@codefive.rs">contact@codefive.rs</a>
   </div>
 </footer>
 
@@ -661,6 +776,33 @@ document.getElementById('kf').addEventListener('submit', async function(e) {
     note.style.color = '#D93025';
   }
 });
+</script>
+
+<script>
+(function(){
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('.mob-link, .mob-cta').forEach(function(link){
+    link.addEventListener('click', function(){
+      hamburger.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+})();
+
+(function(){
+  var btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
 </script>
 </body>
 </html>
